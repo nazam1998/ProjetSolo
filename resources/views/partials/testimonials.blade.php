@@ -4,50 +4,19 @@
       <div class="blankline30"></div>
 
       <ul class="bxslider">
+        @foreach ($testimonials as $item)
+            
         <li>
           <blockquote>
-            Aliquam a orci quis nisi sagittis sagittis. Etiam adipiscing, justo quis feugiat.Suspendisse eu erat quam. Vivamus porttitor eros quis nisi lacinia sed interdum lorem vulputate. Aliquam a orci quis nisi sagittis sagittis. Etiam adipiscing, justo quis
-            feugiat
+            {{$item->texte}}
           </blockquote>
           <div class="testimonial-autor">
-            <img src="img/dummies/testimonial/1.png" alt="" />
-            <h4>Hillary Doe</h4>
-            <a href="#">www.companyname.com</a>
+          <img src="{{'storage/'.$item->photo}}" alt="" />
+          <h4>{{$item->prenom}} {{$item->nom}}</h4>
+            <a href="#">{{$item->lien}}</a>
           </div>
         </li>
-        <li>
-          <blockquote>
-            Aliquam a orci quis nisi sagittis sagittis. Etiam adipiscing, justo quis feugiat.Suspendisse eu erat quam. Vivamus porttitor eros quis nisi lacinia sed interdum lorem vulputate. Aliquam a orci quis nisi sagittis sagittis. Etiam adipiscing, justo quis
-            feugiat
-          </blockquote>
-          <div class="testimonial-autor">
-            <img src="img/dummies/testimonial/2.png" alt="" />
-            <h4>Michael Doe</h4>
-            <a href="#">www.companyname.com</a>
-          </div>
-        </li>
-        <li>
-          <blockquote>
-            Aliquam a orci quis nisi sagittis sagittis. Etiam adipiscing, justo quis feugiat.Suspendisse eu erat quam. Vivamus porttitor eros quis nisi lacinia sed interdum lorem vulputate. Aliquam a orci quis nisi sagittis sagittis. Etiam adipiscing, justo quis
-            feugiat
-          </blockquote>
-          <div class="testimonial-autor">
-            <img src="img/dummies/testimonial/3.png" alt="" />
-            <h4>Mark Donovan</h4>
-            <a href="#">www.companyname.com</a>
-          </div>
-        </li>
-        <li>
-          <blockquote>
-            Aliquam a orci quis nisi sagittis sagittis. Etiam adipiscing, justo quis feugiat.Suspendisse eu erat quam. Vivamus porttitor eros quis nisi lacinia sed interdum lorem vulputate. Aliquam a orci quis nisi sagittis sagittis. Etiam adipiscing, justo quis
-            feugiat
-          </blockquote>
-          <div class="testimonial-autor">
-            <img src="img/dummies/testimonial/4.png" alt="" />
-            <h4>Marry Doe Elliot</h4>
-            <a href="#">www.companyname.com</a>
-          </div>
-        </li>
+        @endforeach
       </ul>
 
     </div>

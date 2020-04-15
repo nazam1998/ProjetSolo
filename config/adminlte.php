@@ -167,7 +167,7 @@ return [
 
     'use_route_url' => false,
 
-    'dashboard_url' => 'home',
+    'dashboard_url' => 'admin',
 
     'logout_url' => 'logout',
 
@@ -212,11 +212,6 @@ return [
             'text'=>'Eterna',
             'url'=>'/'
         ],
-        [
-            'text' => 'search',
-            'search' => false,
-            'topnav' => true,
-        ],
         ['header' => 'Web Site Customization'],
         [
             'text' => 'Header',
@@ -228,7 +223,7 @@ return [
         ],
         [
             'text' => 'Testimonials',
-            'url' => 'admin/testimonials',
+            'url' => 'admin/testimonial',
         ],
         [
             'text' => 'Recent Works',

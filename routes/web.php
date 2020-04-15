@@ -22,3 +22,5 @@ Route::get('/admin', 'WelcomeController@admin')->name('admin');
 Route::get('admin/header', 'HeaderController@index')->name('header.index');
 Route::get('admin/header-edit/{id}', 'HeaderController@edit')->name('header.edit');
 Route::post('admin/header-update/{id}', 'HeaderController@update')->name('header.update');
+
+Route::resource('admin/testimonial', 'TestimonialController');
