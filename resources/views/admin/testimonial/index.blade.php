@@ -23,7 +23,7 @@
               <th>Prénom</th>
               <th>Texte</th>
               <th>Lien</th>
-              <th>Action</th>
+              <th colspan="2">Action</th>
           </tr>
         </thead>
         <tbody>

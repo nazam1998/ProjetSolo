@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Work;
+use Illuminate\Support\Facades\Storage;
 
 class WorkController extends Controller
 {
@@ -13,7 +15,9 @@ class WorkController extends Controller
      */
     public function index()
     {
-        //
+        $works=Work::all();
+        return view('admin.work.index',compact('works'));
+        
     }
 
     /**
@@ -23,7 +27,7 @@ class WorkController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.work.add');
     }
 
     /**
@@ -34,16 +38,21 @@ class WorkController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $work=new Work();
+        $filename=Storage::disk('public')->put('',$request->image);
+        $work->image=$filename;
+        $work->save();
+        return redirect()->route('work.index');
+
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int  Work $work
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Work $work)
     {
         //
     }
@@ -51,34 +60,47 @@ class WorkController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int  Work $work
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Work $work)
     {
-        //
+        return view('admin.work.edit',compact('work'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  int  Work $work
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Work $work)
     {
-        //
+        if($request->hasFile('image')){
+            if(Storage::disk('public')->exists($work->image)){
+                Storage::disk('public')->delete($work->image);
+            }
+            $filename=Storage::disk('public')->put('',$request->image);
+            $work->image=$filename;
+        }
+        $work->save();
+        return redirect()->route('work.index');
+
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int  Work $work
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Work $work)
     {
-        //
+        if(Storage::disk('public')->exists($work->image)){
+            Storage::disk('public')->delete($work->image);
+        }
+        $work->delete();
+        return redirect()->back();
     }
 }

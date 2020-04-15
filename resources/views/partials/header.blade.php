@@ -102,19 +102,35 @@
                                 <li class="dropdown">
                                     <a href="#">Connexion<i class="icon-angle-down"></i></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="{{route('register')}}">Register</a></li>
-                                        <li><a href="{{route('login')}}">Login</a></li>
+                                        {{-- <li><a href="{{route('register')}}">Register</a>
+                                </li> --}}
+                                <li><a href="{{route('login')}}">Login</a></li>
 
-                                    </ul>
-                                </li>
-                                @else
-                                @can('admin', App\User::class)
-                                  
-                                <li>
-                                  <a href="{{route('admin')}}">Admin</a>
-                                </li>
-                                @endcan
-                                @endguest
+                            </ul>
+                            </li>
+                            @else
+                            @can('admin', App\User::class)
+
+                            <li class="dropdown">
+                                <a href="{{route('admin')}}">Admin<i class="icon-angle-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    {{-- <li><a href="{{route('register')}}">Register</a>
+                            </li> --}}
+                            <li><a class="" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                    style="display: none;">
+                                    @csrf
+                                </form>
+                            </li>
+
+                            </ul>
+                            </li>
+                            @endcan
+                            @endguest
                             </ul>
                         </nav>
                     </div>

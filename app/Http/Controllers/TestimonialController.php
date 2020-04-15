@@ -106,7 +106,6 @@ class TestimonialController extends Controller
             Storage::disk('public')->delete($testimonial->photo);
         }
         $testimonial->delete();
-        dd($testimonial);
         return redirect()->back();
     }
 }

@@ -227,11 +227,15 @@ return [
         ],
         [
             'text' => 'Recent Works',
-            'url' => 'admin/works',
+            'url' => 'admin/work',
         ],
         [
             'text' => 'Contact',
             'url' => 'admin/contact',
+        ],
+        [
+            'text' => 'Newsletter',
+            'url' => 'admin/newsletter',
         ],
     ],
 

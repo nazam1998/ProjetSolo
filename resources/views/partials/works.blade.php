@@ -6,74 +6,27 @@
           <div class="row">
 
             <div class="grid cs-style-4">
+              @foreach ($works as $item)
+                  
               <div class="span3">
                 <div class="item">
                   <figure>
-                    <div><img src="{{asset('img/dummies/works/1.jpg')}}" alt="" /></div>
+                    <div><img src="{{asset('storage/'.$item->image)}}" alt="" /></div>
                     <figcaption>
                       <div>
                         <span>
-                              <a href="img/dummies/works/big.png" data-pretty="prettyPhoto[gallery1]" title="Portfolio caption here"><i class="icon-plus icon-circled icon-bglight icon-2x"></i></a>
+                          <a href="{{asset('storage/'.$item->image)}}" data-pretty="prettyPhoto[gallery1]" title="Portfolio caption here"><i class="icon-plus icon-circled icon-bglight icon-2x"></i></a>
                               </span>
-                        <span>
-                              <a href="#"><i class="icon-file icon-circled icon-bglight icon-2x"></i></a>
+                              <span>
+                                <a href="#"><i class="icon-file icon-circled icon-bglight icon-2x"></i></a>
                               </span>
+                            </div>
+                          </figcaption>
+                        </figure>
                       </div>
-                    </figcaption>
-                  </figure>
-                </div>
-              </div>
-              <div class="span3">
-                <div class="item">
-                  <figure>
-                    <div><img src="{{asset('img/dummies/works/2.jpg')}}" alt="" /></div>
-                    <figcaption>
-                      <div>
-                        <span>
-                              <a href="img/dummies/works/big.png" data-pretty="prettyPhoto[gallery1]" title="Portfolio caption here"><i class="icon-plus icon-circled icon-bglight icon-2x"></i></a>
-                              </span>
-                        <span>
-                              <a href="#"><i class="icon-file icon-circled icon-bglight icon-2x"></i></a>
-                              </span>
-                      </div>
-                    </figcaption>
-                  </figure>
-                </div>
-              </div>
-              <div class="span3">
-                <div class="item">
-                  <figure>
-                    <div><img src="{{asset('img/dummies/works/3.jpg')}}" alt="" /></div>
-                    <figcaption>
-                      <div>
-                        <span>
-                              <a href="img/dummies/works/big.png" data-pretty="prettyPhoto[gallery1]" title="Portfolio caption here"><i class="icon-plus icon-circled icon-bglight icon-2x"></i></a>
-                              </span>
-                        <span>
-                              <a href="#"><i class="icon-file icon-circled icon-bglight icon-2x"></i></a>
-                              </span>
-                      </div>
-                    </figcaption>
-                  </figure>
-                </div>
-              </div>
-              <div class="span3">
-                <div class="item">
-                  <figure>
-                    <div><img src="{{asset('img/dummies/works/4.jpg')}}" alt="" /></div>
-                    <figcaption>
-                      <div>
-                        <span>
-                              <a href="img/dummies/works/big.png" data-pretty="prettyPhoto[gallery1]" title="Portfolio caption here"><i class="icon-plus icon-circled icon-bglight icon-2x"></i></a>
-                              </span>
-                        <span>
-                              <a href="#"><i class="icon-file icon-circled icon-bglight icon-2x"></i></a>
-                              </span>
-                      </div>
-                    </figcaption>
-                  </figure>
-                </div>
-              </div>
+                    </div>
+                    
+                    @endforeach
             </div>
 
           </div>

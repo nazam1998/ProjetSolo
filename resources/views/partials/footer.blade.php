@@ -17,16 +17,20 @@
         </div>
         <div class="span4">
           <div class="widget">
+            @foreach ($contact as $item)
             <h5 class="widgetheading">Get in touch</h5>
+                
+            
             <address>
-                          <strong>Eterna company Inc.</strong><br>
-                          Somestreet 200 VW, Suite Village A.001<br>
-                          Jakarta 13426 Indonesia
+            <strong>{{$item->nom}}</strong><br>
+            {{$item->adresse}}<br>
+                          {{$item->ville}}
                       </address>
             <p>
-              <i class="icon-phone"></i> (123) 456-7890 - (123) 555-7891 <br>
-              <i class="icon-envelope-alt"></i> email@domainname.com
+              <i class="icon-phone"></i> {{$item->phone}} <br>
+              <i class="icon-envelope-alt"></i> {{$item->email}}
             </p>
+            @endforeach
           </div>
         </div>
         <div class="span4">
@@ -35,9 +39,13 @@
             <p>
               Keep updated for new releases and freebies. Enter your e-mail and subscribe to our newsletter.
             </p>
-            <form class="subscribe">
+          <form class="subscribe" method="POST" action="{{route('newsletter.subscribe')}}">
+            @csrf
               <div class="input-append">
-                <input class="span2" id="appendedInputButton" type="text">
+                @error('email')
+                {{$message}}
+                @enderror
+                <input class="span2" id="appendedInputButton" type="text" name="email">
                 <button class="btn btn-theme" type="submit">Subscribe</button>
               </div>
             </form>
