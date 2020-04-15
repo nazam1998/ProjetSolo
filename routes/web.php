@@ -26,6 +26,7 @@ Route::post('admin/header-update/{id}', 'HeaderController@update')->name('header
 Route::resource('admin/testimonial', 'TestimonialController');
 Route::resource('admin/work', 'WorkController');
 Route::resource('admin/contact', 'ContactController');
+Route::resource('admin/avantage', 'AvantageController');
 
 Route::get('admin/newsletter','NewsletterController@index')->name('newsletter.index');
 Route::post('admin/newsletter/subscribe','NewsletterController@subscribe')->name('newsletter.subscribe');

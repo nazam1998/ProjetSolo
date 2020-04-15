@@ -6,6 +6,7 @@
           <div class="row">
             <div class="span12">
               <div class="row">
+                {{-- foreach --}}
                 <div class="span4">
                   <div class="box flyLeft">
                     <div class="icon">
@@ -49,7 +50,7 @@
                     </div>
                   </div>
                 </div>
-  
+                {{-- endforeach --}}
               </div>
             </div>
           </div>
