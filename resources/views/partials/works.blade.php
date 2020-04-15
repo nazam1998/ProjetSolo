@@ -9,7 +9,7 @@
               <div class="span3">
                 <div class="item">
                   <figure>
-                    <div><img src="img/dummies/works/1.jpg" alt="" /></div>
+                    <div><img src="{{asset('img/dummies/works/1.jpg')}}" alt="" /></div>
                     <figcaption>
                       <div>
                         <span>
@@ -26,7 +26,7 @@
               <div class="span3">
                 <div class="item">
                   <figure>
-                    <div><img src="img/dummies/works/2.jpg" alt="" /></div>
+                    <div><img src="{{asset('img/dummies/works/2.jpg')}}" alt="" /></div>
                     <figcaption>
                       <div>
                         <span>
@@ -43,7 +43,7 @@
               <div class="span3">
                 <div class="item">
                   <figure>
-                    <div><img src="img/dummies/works/3.jpg" alt="" /></div>
+                    <div><img src="{{asset('img/dummies/works/3.jpg')}}" alt="" /></div>
                     <figcaption>
                       <div>
                         <span>
@@ -60,7 +60,7 @@
               <div class="span3">
                 <div class="item">
                   <figure>
-                    <div><img src="img/dummies/works/4.jpg" alt="" /></div>
+                    <div><img src="{{asset('img/dummies/works/4.jpg')}}" alt="" /></div>
                     <figcaption>
                       <div>
                         <span>

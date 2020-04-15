@@ -209,32 +209,34 @@ return [
 
     'menu' => [
         [
+            'text'=>'Eterna',
+            'url'=>'/'
+        ],
+        [
             'text' => 'search',
             'search' => false,
             'topnav' => true,
         ],
+        ['header' => 'Web Site Customization'],
         [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
+            'text' => 'Header',
+            'url' => 'admin/header',
         ],
         [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
-        ],
-        ['header' => 'account_settings'],
-        [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
+            'text' => 'Avantage',
+            'url' => 'admin/avantage',
         ],
         [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+            'text' => 'Testimonials',
+            'url' => 'admin/testimonials',
+        ],
+        [
+            'text' => 'Recent Works',
+            'url' => 'admin/works',
+        ],
+        [
+            'text' => 'Contact',
+            'url' => 'admin/contact',
         ],
     ],
 

@@ -91,6 +91,6 @@ class UserPolicy
         //
     }
     public function admin(User $user){
-        return $user->role->id==1;
+        return $user->role_id==1;
     }
 }

@@ -1,9 +1,9 @@
 @extends('layouts.admin')
 
 @section('title')
-    Accueil
+    Admin
 @endsection
 
 @section('content')
-    Bienvenue dans le Back-Office
+    <h1>Welcome to the Back Office</h1>
 @endsection
