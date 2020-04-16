@@ -11,6 +11,11 @@ use Illuminate\Http\Request;
 
 class WelcomeController extends Controller
 {
+    
+    public function __construct()
+    {
+        $this->middleware('admin')->only('admin');
+    }
     public function index(){
         $headers=Header::all();
         $works=Work::all();

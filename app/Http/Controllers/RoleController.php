@@ -8,9 +8,10 @@ use Illuminate\Http\Request;
 
 class RoleController extends Controller
 {
+   
     public function __construct()
     {
-        // $this->authorizeResource('admin',User::class);
+        $this->middleware('admin');
     }
     /**
      * Display a listing of the resource.

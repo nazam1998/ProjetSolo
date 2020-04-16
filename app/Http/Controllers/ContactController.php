@@ -9,9 +9,10 @@ use App\User;
 
 class ContactController extends Controller
 {
+   
     public function __construct()
     {
-        // $this->authorizeResource('admin',User::class);
+        $this->middleware('admin');
     }
     public function index(){
         $contacts= Contact::all();

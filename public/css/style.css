@@ -15,6 +15,10 @@
 @import url('overwrite.css');
 @import url('animate.css');
 @import url('shortcodes.css');
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/regular';
 /* Table of content */
 
 /*===================================
@@ -52,7 +56,9 @@ body {
   line-height: 1.6em;
   color: #656565;
 }
-
+.text-dark{
+  color: black;
+}
 a {
   color: #4b5056;
 }

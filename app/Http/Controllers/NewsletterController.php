@@ -10,6 +10,11 @@ use Illuminate\Support\Facades\Mail;
 
 class NewsletterController extends Controller
 {
+    
+    public function __construct()
+    {
+        $this->middleware('admin')->only('index');
+    }
     public function index(){
         // $this->authorize('admin',User::class);
         $newsletters =Newsletter::all();

@@ -10,9 +10,10 @@ use Illuminate\Support\Facades\Storage;
 
 class HeaderController extends Controller
 {
+    
     public function __construct()
     {
-        // $this->authorizeResource('admin',User::class);
+        $this->middleware('admin');
     }
     public function index(){
         $headers=Header::all();

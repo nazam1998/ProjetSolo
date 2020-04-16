@@ -173,7 +173,7 @@ return [
 
     'login_url' => 'login',
 
-    'register_url' => 'register',
+    'register_url' => false,
 
     'password_reset_url' => 'password/reset',
 
@@ -209,31 +209,38 @@ return [
 
     'menu' => [
         [
+            'icon'=>'fas fa-home',
             'text'=>'Eterna',
             'url'=>'/'
         ],
         ['header' => 'Web Site Customization'],
         [
+            'icon'=>'fas fa-headset',
             'text' => 'Header',
             'url' => 'admin/header',
         ],
         [
+            'icon'=>'fas fa-money-bill',
             'text' => 'Avantage',
             'url' => 'admin/avantage',
         ],
         [
+            'icon'=>'fas fa-comment',
             'text' => 'Testimonials',
             'url' => 'admin/testimonial',
         ],
         [
+            'icon'=>'fas fa-briefcase',
             'text' => 'Recent Works',
             'url' => 'admin/work',
         ],
         [
+            'icon'=>'fas fa-phone',
             'text' => 'Contact',
             'url' => 'admin/contact',
         ],
         [
+            'icon'=>'fas fa-envelope',
             'text' => 'Newsletter',
             'url' => 'admin/newsletter',
         ],
