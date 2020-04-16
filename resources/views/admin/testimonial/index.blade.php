@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-<div class="container text-center">
+<div class="container text-center my-2">
 <a href="{{route('testimonial.create')}}" class="btn btn-primary">Ajouter Testimonial</a>
 </div>
 <div class="card">

@@ -16,23 +16,23 @@ class TestimonialSeeder extends Seeder
             [
                 'nom'=>'Jean',
                 'prenom'=>'Luc',
-                'texte'=>'Ce template est trop claqué au sol',
+                'texte'=>"La technologie est l'ensemble des techniques et des moyens qui sert à maîtriser l'environement dans lequel on vit tout en le préservant pour les générations futures",
                 'photo'=>'testimonial/1.png',
-                'lien'=>'OnVaTousR.com',
+                'lien'=>'molengeek.com',
             ],
             [
                 'nom'=>'Jean',
                 'prenom'=>'Luc',
-                'texte'=>'Ce template est trop claqué au sol',
+                'texte'=>"La technologie est l'ensemble des techniques et des moyens qui sert à maîtriser l'environement dans lequel on vit tout en le préservant pour les générations futures",
                 'photo'=>'testimonial/2.png',
-                'lien'=>'OnVaTousR.com',
+                'lien'=>'molengeek.com',
             ],
             [
                 'nom'=>'Jean',
                 'prenom'=>'Luc',
-                'texte'=>'Ce template est trop claqué au sol',
+                'texte'=>"La technologie est l'ensemble des techniques et des moyens qui sert à maîtriser l'environement dans lequel on vit tout en le préservant pour les générations futures",
                 'photo'=>'testimonial/3.png',
-                'lien'=>'OnVaTousR.com',
+                'lien'=>'molengeek.com',
             ],
         ]);
     }

@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" id="testimonials">
     <div class="span12 aligncenter">
       <h3 class="title">What people <strong>saying</strong> about us</h3>
       <div class="blankline30"></div>

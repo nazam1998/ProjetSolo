@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-<div class="container text-center">
+<div class="container text-center my-2">
 <a href="{{route('work.create')}}" class="btn btn-primary">Ajouter Work</a>
 </div>
 <div class="card">

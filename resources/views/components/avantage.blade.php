@@ -12,9 +12,9 @@
                         </div>
                         <div class="text">
                         <h4>{!!$item->titre!!}</h4>
-                            {{-- <p>
+                            <p>
                                 Lorem ipsum dolor sit amet, has ei ipsum scaevola deseruisse am sea facilisis.
-                            </p> --}}
+                            </p>
                             
                         </div>
                     </div>

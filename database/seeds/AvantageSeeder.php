@@ -16,5 +16,13 @@ class AvantageSeeder extends Seeder
             'icone'=>'icon-user-md',
             'titre'=>'Hello world'
         ]);
+        DB::table('avantages')->insert([
+            'icone'=>'icon-user-md',
+            'titre'=>'Hello world'
+        ]);
+        DB::table('avantages')->insert([
+            'icone'=>'icon-user-md',
+            'titre'=>'Hello world'
+        ]);
     }
 }
