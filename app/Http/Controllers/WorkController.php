@@ -4,10 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Work;
+use App\User;
 use Illuminate\Support\Facades\Storage;
 
 class WorkController extends Controller
 {
+    public function __construct()
+    {
+        // $this->authorizeResource('admin',User::class);
+    }
     /**
      * Display a listing of the resource.
      *

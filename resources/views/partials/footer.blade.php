@@ -22,13 +22,13 @@
                 
             
             <address>
-            <strong>{{$item->nom}}</strong><br>
-            {{$item->adresse}}<br>
-                          {{$item->ville}}
+            <strong>{!!$item->nom!!}</strong><br>
+            {!!$item->adresse!!}<br>
+                          {!!$item->ville!!}
                       </address>
             <p>
-              <i class="icon-phone"></i> {{$item->phone}} <br>
-              <i class="icon-envelope-alt"></i> {{$item->email}}
+              <i class="icon-phone"></i> {!!$item->phone!!} <br>
+              <i class="icon-envelope-alt"></i> {!!$item->email!!}
             </p>
             @endforeach
           </div>

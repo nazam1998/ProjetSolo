@@ -12,6 +12,7 @@
     <!-- form start -->
 <form role="form" action="{{route('avantage.update',$avantage)}}" method="POST" enctype="multipart/form-data">
     @csrf
+    @method('PUT')
       <div class="card-body">
         <div class="form-group">
           <label for="titre">Titre</label>
@@ -21,7 +22,7 @@
           <label>Icone</label>
           <select class="form-control select2 select2-primary select2-hidden-accessible icone-select" data-dropdown-css-class="select2-danger" style="width: 100%;" data-select2-id="12" tabindex="-1" aria-hidden="true" name="icone">
             @foreach ($icons as $item)
-          <option value="{{$item['class']}}" @if($item->class==$avantage->icon)selected @endif data-select2-id="14">&#x{{$item['code']}};</option>
+          <option @if($item['class']==$avantage->icone)selected @endif data-select2-id="14" value="{{$item['class']}}">&#x{{$item['code']}};</option>
             @endforeach
           </select>
         </div>

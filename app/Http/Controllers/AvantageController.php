@@ -4,8 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Avantage;
+use App\Helpers\ColorChanger;
+use App\User;
+
 class AvantageController extends Controller
 {
+    public function __construct()
+    {
+        // $this->authorizeResource('admin',User::class);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -25,12 +32,12 @@ class AvantageController extends Controller
     public function create()
     {
         $icons=[
-            ['class'=>'fas fa-desktop','code'=>'f108'],
-            ['class'=>'fas fa-paper-plane','code'=>'f1d8'],
-            ['class'=>'fas fa-chart-bar','code'=>'f080'],
-            ['class'=>'fas fa-camera','code'=>'f030'],
-            ['class'=>'fas fa-road','code'=>'f018'],
-            ['class'=>'fas fa-shopping-bag','code'=>'f290'],
+            ['class'=>'icon-user-md','code'=>'f0f0'],
+            ['class'=>'icon-exchange','code'=>'f0ec'],
+            ['class'=>'icon-cloud-download','code'=>'f0ed'],
+            ['class'=>'icon-cloud-upload','code'=>'f0ee'],
+            ['class'=>'icon-coffee','code'=>'f0f4'],
+            ['class'=>'icon-food','code'=>'f0f5'],
         ];
         return view('admin.avantage.add',compact('icons'));
     }
@@ -45,7 +52,7 @@ class AvantageController extends Controller
     {
         $avantage=new Avantage();
         $avantage->icone=$request->icone;
-        $avantage->titre=$request->titre;
+        $avantage->titre=ColorChanger::black($request->titre);
         $avantage->save();
         return redirect()->route('avantage.index');
     }
@@ -70,14 +77,14 @@ class AvantageController extends Controller
     public function edit(Avantage $avantage)
     {
         $icons=[
-            ['class'=>'fas fa-desktop','code'=>'f108'],
-            ['class'=>'fas fa-paper-plane','code'=>'f1d8'],
-            ['class'=>'fas fa-chart-bar','code'=>'f080'],
-            ['class'=>'fas fa-camera','code'=>'f030'],
-            ['class'=>'fas fa-road','code'=>'f018'],
-            ['class'=>'fas fa-shopping-bag','code'=>'f290'],
+            ['class'=>'icon-user-md','code'=>'f0f0'],
+            ['class'=>'icon-exchange','code'=>'f0ec'],
+            ['class'=>'icon-cloud-download','code'=>'f0ed'],
+            ['class'=>'icon-cloud-upload','code'=>'f0ee'],
+            ['class'=>'icon-coffee','code'=>'f0f4'],
+            ['class'=>'icon-food','code'=>'f0f5'],
         ];
-        return view('admin.avantage.edit',compact('avantage',compact('icons')));
+        return view('admin.avantage.edit',compact('avantage','icons'));
     }
 
     /**
@@ -90,7 +97,7 @@ class AvantageController extends Controller
     public function update(Request $request, Avantage $avantage)
     {
         $avantage->icone=$request->icone;
-        $avantage->titre=$request->titre;
+        $avantage->titre=ColorChanger::black($request->titre);
         $avantage->save();
         return redirect()->route('avantage.index');
     }

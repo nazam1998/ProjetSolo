@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Avantage;
 use App\Contact;
 use App\Header;
 use App\Testimonial;
@@ -14,8 +15,9 @@ class WelcomeController extends Controller
         $headers=Header::all();
         $works=Work::all();
         $contact=Contact::all();
+        $avantages=Avantage::all();
         $testimonials=Testimonial::all();
-        return view('welcome',compact('headers','testimonials','works','contact'));
+        return view('welcome',compact('headers','testimonials','works','contact','avantages'));
     }
     public function admin(){
         return view('admin');

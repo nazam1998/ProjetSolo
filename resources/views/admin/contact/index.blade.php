@@ -25,11 +25,11 @@
         <tbody>
             @foreach ($contacts as $contact)
                 <tr>
-                <td>{{$contact->nom}}</td>
-                <td>{{$contact->adresse}}</td>
-                <td>{{$contact->ville}}</td>
-                <td>{{$contact->phone}}</td>
-                <td>{{$contact->email}}</td>
+                <td>{!!$contact->nom!!}</td>
+                <td>{!!$contact->adresse!!}</td>
+                <td>{!!$contact->ville!!}</td>
+                <td>{!!$contact->phone!!}</td>
+                <td>{!!$contact->email!!}</td>
                 <td><a href="{{route('contact.edit',$contact)}}" class="btn btn-warning">Editer</a></td>
                 </tr>
             @endforeach

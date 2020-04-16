@@ -31,9 +31,9 @@
                 <tr>
                 <td>{{$testimonial->id}}</td>
                 <td><img src="{{asset('storage/'.$testimonial->photo)}}" alt=""></td>
-                <td>{{$testimonial->nom}}</td>
-                <td>{{$testimonial->prenom}}</td>
-                <td>{{$testimonial->texte}}</td>
+                <td>{!!$testimonial->nom!!}</td>
+                <td>{!!$testimonial->prenom!!}</td>
+                <td>{!!$testimonial->texte!!}</td>
                 <td><a href="{{$testimonial->lien}}">{{$testimonial->lien}}</a></td>
                 <td><a href="{{route('testimonial.edit',$testimonial)}}" class="btn btn-warning">Editer</a></td>
                 <td>

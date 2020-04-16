@@ -2,11 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\ColorChanger;
 use Illuminate\Http\Request;
 use App\Testimonial;
+use App\User;
 use Illuminate\Support\Facades\Storage;
 class TestimonialController extends Controller
 {
+    public function __construct()
+    {
+        // $this->authorizeResource('admin',User::class);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -38,9 +44,9 @@ class TestimonialController extends Controller
     {
         $filename=Storage::disk('public')->put('',$request->photo);
         $testimonial=new Testimonial();
-        $testimonial->nom=$request->nom;
-        $testimonial->prenom=$request->prenom;
-        $testimonial->texte=$request->texte;
+        $testimonial->nom=ColorChanger::black($request->nom);
+        $testimonial->prenom=ColorChanger::black($request->prenom);
+        $testimonial->texte=ColorChanger::black($request->texte);
         $testimonial->lien=$request->lien;
         $testimonial->photo=$filename;
         $testimonial->save();
@@ -86,9 +92,9 @@ class TestimonialController extends Controller
             $filename=Storage::disk('public')->put('',$request->photo);
             $testimonial->photo=$filename;
         }
-        $testimonial->nom=$request->nom;
-        $testimonial->prenom=$request->prenom;
-        $testimonial->texte=$request->texte;
+        $testimonial->nom=ColorChanger::black($request->nom);
+        $testimonial->prenom=ColorChanger::black($request->prenom);
+        $testimonial->texte=ColorChanger::black($request->texte);
         $testimonial->lien=$request->lien;
         $testimonial->save();
         return redirect()->route('testimonial.index');

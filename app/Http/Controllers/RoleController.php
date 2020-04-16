@@ -3,10 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Role;
+use App\User;
 use Illuminate\Http\Request;
 
 class RoleController extends Controller
 {
+    public function __construct()
+    {
+        // $this->authorizeResource('admin',User::class);
+    }
     /**
      * Display a listing of the resource.
      *

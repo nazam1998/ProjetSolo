@@ -3,11 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Header;
+use App\Helpers\ColorChanger;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
 class HeaderController extends Controller
 {
+    public function __construct()
+    {
+        // $this->authorizeResource('admin',User::class);
+    }
     public function index(){
         $headers=Header::all();
         return view('admin.header.index',compact('headers'));
@@ -33,8 +39,8 @@ class HeaderController extends Controller
             $filename2=Storage::disk('public')->put('',$request->image2);
             $header->image2=$filename2;
         }
-        $header->titre=$request->titre;
-        $header->description=$request->description;
+        $header->titre=ColorChanger::black($request->titre);
+        $header->description=ColorChanger::black($request->description);
         $header->save();
         return redirect()->route('header.index');
     }

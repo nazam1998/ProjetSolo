@@ -8,12 +8,12 @@
             
         <li>
           <blockquote>
-            {{$item->texte}}
+            {!!$item->texte!!}
           </blockquote>
           <div class="testimonial-autor">
-          <img src="{{'storage/'.$item->photo}}" alt="" />
-          <h4>{{$item->prenom}} {{$item->nom}}</h4>
-            <a href="#">{{$item->lien}}</a>
+          <img src="{!!'storage/'.$item->photo!!}" alt="" />
+          <h4>{!!$item->prenom!!} {!!$item->nom!!}</h4>
+            <a href="#">{!!$item->lien!!}</a>
           </div>
         </li>
         @endforeach

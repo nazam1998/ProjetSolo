@@ -28,8 +28,8 @@
                 <td>{{$header->id}}</td>
                 <td><img src="{{asset('storage/'.$header->image1)}}" alt=""></td>
                 <td><img src="{{asset('storage/'.$header->image2)}}" alt=""></td>
-                <td>{{$header->titre}}</td>
-                <td>{{$header->description}}</td>
+                <td>{!!$header->titre!!}</td>
+                <td>{!!$header->description!!}</td>
                 <td><a href="{{route('header.edit',$header->id)}}" class="btn btn-warning">Editer</a></td>
                 </tr>
             @endforeach

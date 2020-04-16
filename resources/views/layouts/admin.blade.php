@@ -7,6 +7,7 @@
 
 @section('content_header')
     <h1>Dashboard</h1>
+    Pour mettre du texte en noir, vous pouvez mettre des [] autour de celui-ci
 @stop
 
 @section('content')
