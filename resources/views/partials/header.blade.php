@@ -45,7 +45,7 @@
                                 </li>
                                 
                                 <li>
-                                    <a href="#featured">Features </a>
+                                    <a href="#featured">Avantages </a>
                                 </li>
                                 <li>
                                     <a href="#testimonials">Testimonials </a>
