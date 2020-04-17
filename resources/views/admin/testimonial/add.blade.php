@@ -16,11 +16,11 @@
       <div class="card-body">
         <div class="form-group">
           <label for="nom">Nom</label>
-        <input type="text" class="form-control" id="nom" placeholder="Enter Title" name="nom" value="{{old('nom')}}">
+        <input type="text" class="form-control" id="nom" placeholder="Enter Name" name="nom" value="{{old('nom')}}">
         </div>
         <div class="form-group">
           <label for="prenom">Prenom</label>
-        <input type="text" class="form-control" id="prenom" placeholder="Enter Title" name="prenom" value="{{old('prenom')}}">
+        <input type="text" class="form-control" id="prenom" placeholder="Enter Surname" name="prenom" value="{{old('prenom')}}">
         </div>
         <div class="form-group">
           <label for="lien">Lien</label>

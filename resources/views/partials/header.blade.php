@@ -48,9 +48,6 @@
                                     <a href="#featured">Features </a>
                                 </li>
                                 <li>
-                                    <a href="#content">Pricing </a>
-                                </li>
-                                <li>
                                     <a href="#testimonials">Testimonials </a>
                                 </li>
                                 <li>

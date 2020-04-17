@@ -17,7 +17,7 @@
                             <i class="ico icon-circled icon-bgdark {{$item->icone}} active icon-3x"></i>
                         </div>
                         <div class="text">
-                        <h4>{!!$item->titre!!}</h4>
+                        <h4>{!!App\Helpers\ColorChanger::black($item->titre)!!}</h4>
                             <p>
                                 Lorem ipsum dolor sit amet, has ei ipsum scaevola deseruisse am sea facilisis.
                             </p>

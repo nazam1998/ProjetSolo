@@ -22,13 +22,13 @@
                 
             
             <address>
-            <strong>{!!$item->nom!!}</strong><br>
-            {!!$item->adresse!!}<br>
-                          {!!$item->ville!!}
+            <strong>{!!App\Helpers\ColorChanger::black($item->nom)!!}</strong><br>
+            {!!App\Helpers\ColorChanger::black($item->adresse)!!}<br>
+                          {!!App\Helpers\ColorChanger::black($item->ville)!!}
                       </address>
             <p>
-              <i class="icon-phone"></i> {!!$item->phone!!} <br>
-              <i class="icon-envelope-alt"></i> {!!$item->email!!}
+              <i class="icon-phone"></i> {!!App\Helpers\ColorChanger::black($item->phone)!!} <br>
+              <i class="icon-envelope-alt"></i> {!!App\Helpers\ColorChanger::black($item->email)!!}
             </p>
             @endforeach
           </div>

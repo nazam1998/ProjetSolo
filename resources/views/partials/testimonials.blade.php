@@ -8,12 +8,12 @@
             
         <li>
           <blockquote>
-            {!!$item->texte!!}
+            {!!App\Helpers\ColorChanger::black($item->texte)!!}
           </blockquote>
           <div class="testimonial-autor">
           <img src="{!!'storage/'.$item->photo!!}" alt="" />
-          <h4>{!!$item->prenom!!} {!!$item->nom!!}</h4>
-            <a href="#">{!!$item->lien!!}</a>
+          <h4>{!!App\Helpers\ColorChanger::black($item->nom.' '.$item->prenom)!!}</h4>
+            <a href="#">{!!App\Helpers\ColorChanger::black($item->lien)!!}</a>
           </div>
         </li>
         @endforeach

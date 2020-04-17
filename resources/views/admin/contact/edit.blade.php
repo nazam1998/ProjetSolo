@@ -21,7 +21,7 @@
         </div>
         <div class="form-group">
           <label for="adresse">Adresse</label>
-        <input type="text" class="form-control" id="adresse" placeholder="Enter Nom" name="adresse" value="{{$contact->adresse}}">
+        <input type="text" class="form-control" id="adresse" placeholder="Enter Addres" name="adresse" value="{{$contact->adresse}}">
         </div>
         <div class="form-group">
           <label for="ville">Ville</label>

@@ -84,6 +84,8 @@ class AvantageController extends Controller
             ['class'=>'icon-coffee','code'=>'f0f4','text'=>'coffee'],
             ['class'=>'icon-food','code'=>'f0f5','text'=>'food'],
         ];
+        $avantage->titre=ColorChanger::back($avantage->titre);
+        $avantage->save();
         return view('admin.avantage.edit',compact('avantage','icons'));
     }
 

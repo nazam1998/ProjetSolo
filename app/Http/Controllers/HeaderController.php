@@ -21,6 +21,9 @@ class HeaderController extends Controller
     }
     public function edit($id){
         $header=Header::find($id);
+        $header->titre=ColorChanger::back($header->titre);
+        $header->description=ColorChanger::back($header->description);
+        $header->save();
         return view('admin.header.edit',compact('header'));
     }
 

@@ -73,6 +73,10 @@ class TestimonialController extends Controller
      */
     public function edit(Testimonial $testimonial)
     {
+        $testimonial->nom=ColorChanger::back($$testimonial->nom);
+        $testimonial->prenom=ColorChanger::back($$testimonial->prenom);
+        $testimonial->texte=ColorChanger::back($$testimonial->texte);
+        $testimonial->save();
         return view('admin.testimonial.edit',compact('testimonial'));
 
     }
