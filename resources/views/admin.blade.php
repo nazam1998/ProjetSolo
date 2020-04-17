@@ -5,5 +5,7 @@
 @endsection
 
 @section('content')
-    <h1>Welcome to the Back Office</h1>
+    <h1 class="text-center">Welcome to the Back Office</h1>
+    
+    
 @endsection
