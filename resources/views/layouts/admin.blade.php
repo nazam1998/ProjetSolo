@@ -2,12 +2,11 @@
 @extends('adminlte::page')
 
 @section('title')
-    @yield('title')
+    
 @endsection
 
 @section('content_header')
-    <h1>Dashboard</h1>
-    Pour mettre du texte en noir, vous pouvez mettre des [] autour de celui-ci
+    <h1>@yield('title')</h1>
 @stop
 
 @section('content')

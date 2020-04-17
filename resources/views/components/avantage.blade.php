@@ -3,10 +3,16 @@
             <div class="span12">
               <div class="row">
                 {{-- foreach --}}
-                @foreach ($avantages as $item)
+                @foreach ($avantages as $index=>$item)
                     
                 <div class="span4">
-                    <div class="box flyLeft">
+                  @if ($index%3==1)
+                  <div class="box flyIn">
+                    @elseif($index%3==2)
+                    <div class="box flyRight">
+                    @else
+                        <div class="box flyLeft">
+                  @endif
                         <div class="icon">
                             <i class="ico icon-circled icon-bgdark {{$item->icone}} active icon-3x"></i>
                         </div>

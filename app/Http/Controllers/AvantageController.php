@@ -32,12 +32,12 @@ class AvantageController extends Controller
     public function create()
     {
         $icons=[
-            ['class'=>'icon-user-md','code'=>'f0f0'],
-            ['class'=>'icon-exchange','code'=>'f0ec'],
-            ['class'=>'icon-cloud-download','code'=>'f0ed'],
-            ['class'=>'icon-cloud-upload','code'=>'f0ee'],
-            ['class'=>'icon-coffee','code'=>'f0f4'],
-            ['class'=>'icon-food','code'=>'f0f5'],
+            ['class'=>'icon-user-md','code'=>'f0f0','text'=>'User'],
+            ['class'=>'icon-exchange','code'=>'f0ec','text'=>'exchange'],
+            ['class'=>'icon-cloud-download','code'=>'f0ed','text'=>'cloud download'],
+            ['class'=>'icon-cloud-upload','code'=>'f0ee','text'=>'cloud upload'],
+            ['class'=>'icon-coffee','code'=>'f0f4','text'=>'coffee'],
+            ['class'=>'icon-food','code'=>'f0f5','text'=>'food'],
         ];
         return view('admin.avantage.add',compact('icons'));
     }
@@ -77,12 +77,12 @@ class AvantageController extends Controller
     public function edit(Avantage $avantage)
     {
         $icons=[
-            ['class'=>'icon-user-md','code'=>'f0f0'],
-            ['class'=>'icon-exchange','code'=>'f0ec'],
-            ['class'=>'icon-cloud-download','code'=>'f0ed'],
-            ['class'=>'icon-cloud-upload','code'=>'f0ee'],
-            ['class'=>'icon-coffee','code'=>'f0f4'],
-            ['class'=>'icon-food','code'=>'f0f5'],
+            ['class'=>'icon-user-md','code'=>'f0f0','text'=>'User'],
+            ['class'=>'icon-exchange','code'=>'f0ec','text'=>'exchange'],
+            ['class'=>'icon-cloud-download','code'=>'f0ed','text'=>'cloud download'],
+            ['class'=>'icon-cloud-upload','code'=>'f0ee','text'=>'cloud upload'],
+            ['class'=>'icon-coffee','code'=>'f0f4','text'=>'coffee'],
+            ['class'=>'icon-food','code'=>'f0f5','text'=>'food'],
         ];
         return view('admin.avantage.edit',compact('avantage','icons'));
     }

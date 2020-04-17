@@ -7,6 +7,7 @@
 <div class="card card-primary">
     <div class="card-header">
       <h3 class="card-title">Add Avantage</h3>
+      <p class="card-text">Pour mettre du texte en noir, vous pouvez mettre des [] autour de celui-ci</p>
     </div>
     <!-- /.card-testimonial -->
     <!-- form start -->
@@ -22,7 +23,7 @@
           <label>Icone</label>
           <select class="form-control icone-select fas" name="icone">
             @foreach ($icons as $item)
-          <option @if($item['class']==$avantage->icone)selected @endif data-select2-id="14" value="{{$item['class']}}" class='fas'>&#x{{$item['code']}};</option>
+          <option @if($item['class']==$avantage->icone)selected @endif data-select2-id="14" value="{{$item['class']}}" class='fas'>&#x{{$item['code']}}; {{$item['text']}}</option>
             @endforeach
           </select>
         </div>

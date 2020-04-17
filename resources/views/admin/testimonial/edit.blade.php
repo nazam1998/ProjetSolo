@@ -7,6 +7,7 @@
 <div class="card card-primary">
     <div class="card-testimonial">
       <h3 class="card-title">Edit Testimonial</h3>
+      <p class="card-text">Pour mettre du texte en noir, vous pouvez mettre des [] autour de celui-ci</p>
     </div>
     <!-- /.card-testimonial -->
     <!-- form start -->
