@@ -44,6 +44,9 @@ class WorkController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'image'=>'required|image'
+        ]);
         $work=new Work();
         $filename=Storage::disk('public')->put('',$request->image);
         $work->image=$filename;
@@ -60,7 +63,7 @@ class WorkController extends Controller
      */
     public function show(Work $work)
     {
-        //
+        return Storage::download('public/'.$work->image);
     }
 
     /**
@@ -83,6 +86,9 @@ class WorkController extends Controller
      */
     public function update(Request $request, Work $work)
     {
+        $request->validate([
+            'image'=>'required|image'
+        ]);
         if($request->hasFile('image')){
             if(Storage::disk('public')->exists($work->image)){
                 Storage::disk('public')->delete($work->image);

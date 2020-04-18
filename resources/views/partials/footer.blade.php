@@ -36,15 +36,21 @@
         <div class="span4">
           <div class="widget">
             <h5 class="widgetheading">Subscribe newsletter</h5>
+            
+            @error('email')
+            <span style="color: red;">{{$message}}</span>
+            @enderror
+            @if (session()->has('msg'))
+            <span class="text-success">{{session('msg')}}</span>
+            @endif
             <p>
               Keep updated for new releases and freebies. Enter your e-mail and subscribe to our newsletter.
             </p>
-          <form class="subscribe" method="POST" action="{{route('newsletter.subscribe')}}">
+            
+          <form id="newsletter" class="subscribe" method="POST" action="{{route('newsletter.subscribe')}}">
             @csrf
               <div class="input-append">
-                @error('email')
-                {{$message}}
-                @enderror
+                
                 <input class="span2" id="appendedInputButton" type="text" name="email">
                 <button class="btn btn-theme" type="submit">Subscribe</button>
               </div>

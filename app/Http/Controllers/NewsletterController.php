@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\NewsMail;
 use App\Newsletter;
-use App\User;
+use App\Http\Requests\NewsletterRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -20,14 +20,11 @@ class NewsletterController extends Controller
         $newsletters =Newsletter::all();
         return view('admin.news.index',compact('newsletters'));
     }
-    public function subscribe(Request $request){
-        $request->validate([
-            'email'=>'required|email|unique:users'
-        ]);
+    public function subscribe(NewsletterRequest $request){
         $news=new Newsletter();
         $news->email=$request->email;
         $news->save();
         Mail::to($news->email)->send(new NewsMail($news->email));
-        return redirect()->back();
+        return redirect('/#newsletter')->with(['msg'=>'You have successfully subscribed']);
     }
 }

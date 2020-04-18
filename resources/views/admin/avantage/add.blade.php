@@ -20,10 +20,10 @@
         </div>
         <div class="form-group" data-select2-id="29">
           <label>Icone</label>
-          <select class="form-control icone-select fas"  name="icone">
+          <select class="form-control icone-select"  name="icone">
             @foreach ($icons as $item)
             <div class="icon">
-              <option data-select2-id="14" value="{{$item['class']}}" class="fas">&#x{{$item['code']}}; {{$item['text']}}</option>
+              <option value="{{$item['class']}}" class="fas">&#x{{$item['code']}}; {{$item['text']}}</option>
             </div>
             @endforeach
           </select>
@@ -32,7 +32,7 @@
       <!-- /.card-body -->
 
       <div class="card-footer">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Ajouter</button>
       </div>
     </form>
   </div>

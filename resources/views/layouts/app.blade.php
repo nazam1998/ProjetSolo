@@ -17,6 +17,7 @@
   <link href="{{asset('css/camera.css')}}" rel="stylesheet" />
   <link href="{{asset('css/jquery.bxslider.css')}}" rel="stylesheet" />
   <link href="{{asset('css/style.css')}}" rel="stylesheet" />
+  <link href="{{asset('css/app.css')}}" rel="stylesheet" />
 
   <!-- Theme skin -->
   <link href="{{asset('color/default.css')}}" rel="stylesheet" />
@@ -64,6 +65,7 @@
 
 <!-- Template Custom JavaScript File -->
 <script src="{{asset('js/custom.js')}}"></script>
+{{-- <script src="{{asset('js/app.js')}}"></script> --}}
 
 </body>
 </html>

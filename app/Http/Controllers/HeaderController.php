@@ -21,13 +21,16 @@ class HeaderController extends Controller
     }
     public function edit($id){
         $header=Header::find($id);
-        $header->titre=ColorChanger::back($header->titre);
-        $header->description=ColorChanger::back($header->description);
-        $header->save();
         return view('admin.header.edit',compact('header'));
     }
 
     public function update(Request $request,$id){
+        $request->validate([
+            'image1'=>'required|image',
+            'image2'=>'required|image',
+            'titre'=>'required|string',
+            'description'=>'required|string',
+        ]);
         $header=Header::find($id);
         if($request->hasFile('image1')){
             if(Storage::exists($header->image1)){
@@ -43,8 +46,8 @@ class HeaderController extends Controller
             $filename2=Storage::disk('public')->put('',$request->image2);
             $header->image2=$filename2;
         }
-        $header->titre=ColorChanger::black($request->titre);
-        $header->description=ColorChanger::black($request->description);
+        $header->titre=$request->titre;
+        $header->description=$request->description;
         $header->save();
         return redirect()->route('header.index');
     }

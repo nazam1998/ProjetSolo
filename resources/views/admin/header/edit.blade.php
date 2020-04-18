@@ -19,7 +19,7 @@
         <input type="text" class="form-control" id="titre" placeholder="Enter Title" name="titre" value="{{$header->titre}}">
         </div>
         <div class="form-group">
-          <label for="description">Titre</label>
+          <label for="description">Description</label>
           <textarea name="description" id="description" cols="30" rows="10" class="form-control">{{$header->description}}</textarea>
         </div>
         <div class="form-group">
@@ -43,7 +43,7 @@
       <!-- /.card-body -->
 
       <div class="card-footer">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Editer</button>
       </div>
     </form>
   </div>

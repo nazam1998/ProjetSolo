@@ -43,11 +43,18 @@ class TestimonialController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'nom'=>'required|string',
+            'prenom'=>'required|string',
+            'texte'=>'required|string',
+            'lien'=>'required|string',
+            'photo'=>'required|image',
+        ]);
         $filename=Storage::disk('public')->put('',$request->photo);
         $testimonial=new Testimonial();
-        $testimonial->nom=ColorChanger::black($request->nom);
-        $testimonial->prenom=ColorChanger::black($request->prenom);
-        $testimonial->texte=ColorChanger::black($request->texte);
+        $testimonial->nom=$request->nom;
+        $testimonial->prenom=$request->prenom;
+        $testimonial->texte=$request->texte;
         $testimonial->lien=$request->lien;
         $testimonial->photo=$filename;
         $testimonial->save();
@@ -73,10 +80,6 @@ class TestimonialController extends Controller
      */
     public function edit(Testimonial $testimonial)
     {
-        $testimonial->nom=ColorChanger::back($$testimonial->nom);
-        $testimonial->prenom=ColorChanger::back($$testimonial->prenom);
-        $testimonial->texte=ColorChanger::back($$testimonial->texte);
-        $testimonial->save();
         return view('admin.testimonial.edit',compact('testimonial'));
 
     }
@@ -97,9 +100,9 @@ class TestimonialController extends Controller
             $filename=Storage::disk('public')->put('',$request->photo);
             $testimonial->photo=$filename;
         }
-        $testimonial->nom=ColorChanger::black($request->nom);
-        $testimonial->prenom=ColorChanger::black($request->prenom);
-        $testimonial->texte=ColorChanger::black($request->texte);
+        $testimonial->nom=$request->nom;
+        $testimonial->prenom=$request->prenom;
+        $testimonial->texte=$request->texte;
         $testimonial->lien=$request->lien;
         $testimonial->save();
         return redirect()->route('testimonial.index');

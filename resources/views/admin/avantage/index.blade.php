@@ -28,7 +28,7 @@
                 <tr>
                 <td>{{$avantage->id}}</td>
                 <td>{!! $avantage->titre !!}</td>
-                <td><i class="ico icon-circled icon-bgdark {{$avantage->icone}} active icon-3x">{{$avantage->icone}}</i></td>
+                <td><i class="ico icon-circled icon-bgdark {{$avantage->icone}} active icon-3x">  {{$avantage->icone}}</i></td>
 
                 <td><a href="{{route('avantage.edit',$avantage)}}" class="btn btn-warning">Editer</a></td>
                 <td>

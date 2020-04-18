@@ -18,7 +18,7 @@
                           <a href="{{asset('storage/'.$item->image)}}" data-pretty="prettyPhoto[gallery1]" title="Portfolio caption here"><i class="icon-plus icon-circled icon-bglight icon-2x"></i></a>
                               </span>
                               <span>
-                                <a href="#"><i class="icon-file icon-circled icon-bglight icon-2x"></i></a>
+                              <a href="{{route('work.show',$item)}}"><i class="icon-file icon-circled icon-bglight icon-2x"></i></a>
                               </span>
                             </div>
                           </figcaption>

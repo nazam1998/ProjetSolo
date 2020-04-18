@@ -31,8 +31,7 @@ Route::resource('admin/avantage', 'AvantageController');
 
 Route::get('admin/newsletter','NewsletterController@index')->name('newsletter.index');
 Route::post('admin/newsletter/subscribe','NewsletterController@subscribe')->name('newsletter.subscribe');
-Auth::routes();
 
 Route::get('/home', function() {
     return view('home');
-})->name('home')->middleware('auth');
+})->name('home')->middleware('admin');
