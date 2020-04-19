@@ -41,7 +41,7 @@
                         <nav>
                             <ul class="nav topnav">
                                 <li class="active">
-                                    <a href="index.html"><i class="icon-home"></i>  Home</a>
+                                    <a href="/"><i class="icon-home"></i>  Home</a>
                                 </li>
                                 
                                 <li>

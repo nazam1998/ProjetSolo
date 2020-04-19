@@ -14,7 +14,7 @@ Editer Work
         @csrf
         @method('PUT')
         <div class="card-body">
-
+<p>Pour ajouter l'email de l'utilisateur dans le message, veuillez mettre {email} à l'endroit où vous souhaitez qu'il apparaisse.</p>
             <div class="form-group">
                 <label for="msg">Mail Message</label>
                 <div class="input-group">
