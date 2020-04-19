@@ -24,7 +24,11 @@ Ajouter Avantage
                 <label>Icone</label>
                 <select class="form-control icone-select" name="icone">
                     @foreach ($icons as $item)
-                    <option @if( $item['class'] == $avantage->icone ) selected @endif value="{{$item['class']}}">&#x{{$item['code']}} {{$item['text']}}</option>
+                    @if( $item['class'] == $avantage->icone )
+                    <option selected  value="{{$item['class']}}">&#x{{$item['code']}} {{$item['text']}}</option>
+                    @else 
+                    <option  value="{{$item['class']}}">&#x{{$item['code']}} {{$item['text']}}</option>
+                    @endif
                     @endforeach
                 </select>
             </div>

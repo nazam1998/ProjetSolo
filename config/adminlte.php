@@ -240,9 +240,15 @@ return [
             'url' => 'admin/contact',
         ],
         [
+            'text'=>'Newsletter',
             'icon'=>'fas fa-envelope',
-            'text' => 'Newsletter',
-            'url' => 'admin/newsletter',
+            'submenu'=>[
+                ['icon'=>'fas fa-users',
+            'text' => 'Newsletter Subscription',
+            'url' => 'admin/newsletter'],
+            ['icon'=>'fas fa-pen',
+            'text' => 'Newsletter Mail',
+            'url' => 'admin/mail'],]
         ],
     ],
 

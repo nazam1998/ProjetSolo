@@ -13,15 +13,15 @@ class AvantageSeeder extends Seeder
     public function run()
     {
         DB::table('avantages')->insert([
-            'icone'=>'fas fa-tags',
+            'icone'=>'fas fa-camera',
             'titre'=>'Hello world'
         ]);
         DB::table('avantages')->insert([
-            'icone'=>'fas fa-tags',
+            'icone'=>'fas fa-camera',
             'titre'=>'Hello world'
         ]);
         DB::table('avantages')->insert([
-            'icone'=>'fas fa-tags',
+            'icone'=>'fas fa-camera',
             'titre'=>'Hello world'
         ]);
     }

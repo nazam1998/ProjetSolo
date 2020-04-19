@@ -29,6 +29,8 @@ Route::resource('admin/work', 'WorkController');
 Route::resource('admin/contact', 'ContactController');
 Route::resource('admin/avantage', 'AvantageController');
 
+Route::resource('admin/mail', 'RegistermailController');
+
 Route::get('admin/newsletter','NewsletterController@index')->name('newsletter.index');
 Route::post('admin/newsletter/subscribe','NewsletterController@subscribe')->name('newsletter.subscribe');
 
