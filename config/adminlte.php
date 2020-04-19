@@ -220,12 +220,12 @@ return [
             'url' => 'admin/header',
         ],
         [
-            'icon'=>'fas fa-money-bill',
+            'icon'=>'fas fa-thumbs-up',
             'text' => 'Avantage',
             'url' => 'admin/avantage',
         ],
         [
-            'icon'=>'fas fa-comment',
+            'icon'=>'fas fa-comment-alt',
             'text' => 'Testimonials',
             'url' => 'admin/testimonial',
         ],
@@ -235,7 +235,7 @@ return [
             'url' => 'admin/work',
         ],
         [
-            'icon'=>'fas fa-phone',
+            'icon'=>'fas fa-phone-alt',
             'text' => 'Contact',
             'url' => 'admin/contact',
         ],

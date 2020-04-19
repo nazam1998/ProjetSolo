@@ -16951,6 +16951,10 @@ table td img {
   width: 150px;
 }
 
+.card {
+  padding: 10px;
+}
+
 .icone-select {
   font-family: "Lato", "Font Awesome 5 Free", "Font Awesome 5 Brands";
   font-weight: 900;
